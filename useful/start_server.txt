@@ -1,0 +1,1 @@
+ ./odoo-bin --addons-path=/home/odoo/workspace/odoo10/server/odoo/addons/,/home/odoo/workspace/odoo10/server/odoo/odoo/addons/,/home/odoo/workspace/odoo10/obuka10/addons/

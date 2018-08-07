@@ -1,0 +1,1 @@
+/home/odoo/workspace/odoo10/server/odoo/odoo-bin scaffold training

@@ -1,0 +1,17 @@
+
+
+- kreirati novu klasu za lokaciju treninga
+    - naziv
+    - adresa (ulica i broj)
+    - grad
+    - država (veza na res_country iz base modula)
+    - opis lokacije (isprobati fields.Html)
+- za novu klasu napraviti izbornik ispod treninga
+    - napraviti tree view
+    - form view
+    - search view
+- na trening dodati odabir lokacije
+- na listu treninga dodati grupiranje po lokaciji
+
+- na formi lokacije dodati one2many da se vide svi treninzi koji se odvijaju na toj lokaciji
+

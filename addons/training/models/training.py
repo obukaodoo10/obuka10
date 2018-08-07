@@ -18,6 +18,11 @@ class trainingTraining(models.Model):
                               ('cancel', 'Cancelled')], default='draft')
     student_ids = fields.One2many('training.student', 'training_id', 'Students')
     trainer_id = fields.Many2one('res.partner', 'Trainer', required=True)
+    number = fields.Char('Number', readonly=True)
+
+    _sql_constraints = [
+        ('number_uniq', 'unique(number)', 'Training Number must be unique!'),
+    ]
 
     @api.multi
     def action_confirm(self):
@@ -38,6 +43,14 @@ class trainingTraining(models.Model):
     def action_activate(self):
         for training in self:
             training.state = 'draft'
+
+    @api.model
+    def create(self, vals):
+        vals['number'] = self.env['ir.sequence'].next_by_code('training') or _('NaV')
+
+        res = super(trainingTraining, self).create(vals)
+
+        return res
 
     @api.multi
     def unlink(self):

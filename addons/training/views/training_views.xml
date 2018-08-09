@@ -12,7 +12,7 @@
           <field name="start_date"/>
           <field name="length_days"/>
           <field name="state"/>
-          <field name="location"/>
+          <field name="location_id"/>
         </tree>
       </field>
     </record>
@@ -46,30 +46,24 @@
                       <field name="trainer_id"/>
                       <field name="start_date"/>
                       <field name="length_days"/>
-                      <field name="location" string="Location again"/>
+                      <field name="location_id" string="Location again"/>
                       <!-- <field name="id"/> -->
                     </group>
               </group>
-                <sheet>
                    <notebook>
-                          <page string="Location again">
-                          <field name="location"/>
-                          </page>
-
-                  <page string="Description">
-                      <field name="description"/>
-                  </page>
-                  <page string="Students">
-                      <field name="student_ids">
-                          <tree editable="bottom">
-                              <field name="name"/>
-                              <field name="surname"/>
-                              <field name="age"/>
-                          </tree>
-                      </field>
-                  </page>
-              </notebook>
-                    </sheet>
+                      <page string="Description">
+                          <field name="description"/>
+                      </page>
+                      <page string="Students">
+                          <field name="student_ids">
+                              <tree editable="bottom">
+                                  <field name="name"/>
+                                  <field name="surname"/>
+                                  <field name="age"/>
+                              </tree>
+                          </field>
+                      </page>
+                    </notebook>
           </sheet>
         </form>
       </field>
@@ -90,6 +84,7 @@
           <group expand="0" string="Group By">
               <filter string="Status" domain="[]" context="{'group_by': 'state'}"/>
               <filter string="Start Date" domain="[]" context="{'group_by': 'start_date'}"/>
+              <filter string="Location" domain="[]" context="{'group_by': 'location_id'}"/>
           </group>
         </search>
       </field>

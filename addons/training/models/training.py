@@ -19,7 +19,7 @@ class trainingTraining(models.Model):
     student_ids = fields.One2many('training.student', 'training_id', 'Students')
     trainer_id = fields.Many2one('res.partner', 'Trainer', required=True)
     number = fields.Char('Number', readonly=True)
-    location = fields.Many2one('location.training')
+    location_id = fields.Many2one('location.training', 'Location')
 
 
 
@@ -82,19 +82,4 @@ class studentTraining(models.Model):
     name = fields.Char('Name', limit=20, required=True)
     surname = fields.Char('Surname', limit=30)
     age = fields.Integer('Age')
-
-
-class trainingLocation(models.Model):
-    _name = 'location.training'
-
-    name = fields.Char('Name', limit=20, required=True)
-    adress = fields.Char('Adress', limit=20)
-    city = fields.Char('City')
-    country = fields.Many2one('res.country',string = 'Country')
-    surname = fields.Char('Surname', limit=30)
-    age = fields.Integer('Age')
-    description = fields.Html('Description')
-    addition = fields.Text('Practice!')
-    All = fields.One2many('training.training', 'location', 'How_many')
-
 

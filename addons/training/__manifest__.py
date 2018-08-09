@@ -26,6 +26,7 @@
         # 'security/ir.model.access.csv',
         'data/training_sequence.xml',
         'views/training_views.xml',
+        'views/training_location.xml',
         # 'views/templates.xml',
     ],
     # only loaded in demonstration mode

@@ -12,6 +12,7 @@
           <field name="start_date"/>
           <field name="length_days"/>
           <field name="state"/>
+          <field name="location"/>
         </tree>
       </field>
     </record>
@@ -45,10 +46,16 @@
                       <field name="trainer_id"/>
                       <field name="start_date"/>
                       <field name="length_days"/>
+                      <field name="location" string="Location again"/>
                       <!-- <field name="id"/> -->
-                  </group>
+                    </group>
               </group>
-              <notebook>
+                <sheet>
+                   <notebook>
+                          <page string="Location again">
+                          <field name="location"/>
+                          </page>
+
                   <page string="Description">
                       <field name="description"/>
                   </page>
@@ -62,6 +69,7 @@
                       </field>
                   </page>
               </notebook>
+                    </sheet>
           </sheet>
         </form>
       </field>
@@ -87,6 +95,7 @@
       </field>
     </record>
 
+
     <record model="ir.actions.act_window" id="training.training_action">
       <field name="name">Trainings</field>
       <field name="res_model">training.training</field>
@@ -99,6 +108,9 @@
 
     <menuitem name="Trainings" id="training.menu_1_list" parent="training.menu_1"
               action="training.training_action"/>
+
+      <!--<menuitem name="Locations" id="training.menu_2_list" parent="training.menu_1"-->
+              <!--action="training.location_action"/>-->
 
   </data>
 </odoo>

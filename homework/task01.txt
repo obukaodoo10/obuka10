@@ -10,7 +10,8 @@
     - napraviti tree view
     - form view
     - search view
-- na trening dodati odabir lokacije
+-
+
 - na listu treninga dodati grupiranje po lokaciji
 
 - na formi lokacije dodati one2many da se vide svi treninzi koji se odvijaju na toj lokaciji

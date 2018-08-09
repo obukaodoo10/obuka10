@@ -1,0 +1,31 @@
+
+
+- u izborniku napraviti novu grupu "Setup"
+    - u nju prebaciti lokacije i dodati dvorane
+    - za dvorane kreirati tree, search, form
+
+- probati napraviti funkciju za default vrijednost (recimo da cijena treninga bude random broj 100-500)
+
+- pogledati kako rade attrs i options u viewovima
+    - primjer: dodati checkbox na training Show Total Amount (novo boolean polje, default=False)
+    - kada se uključi onda se ukupan iznos vidi, inače je sakriven
+
+- pogledati još malo onchange funkcije
+    - napraviti ako je netko upisao broj dana veći od 300 da vrati natrag na 200
+
+- nakon dodavanja novih polja (ovo za Show Total Amount) napraviti prijevod
+    - ponovo export, prevesti sve i reinstalirati modul i vidjeti je li ok
+
+
+
+
+NOVI MODUL:
+- nešto vezano uz prijevoz
+    - napraviti tablicu s autima (naziv, tip, model, godina proiz, slika, pros. potrošnja goriva 100km...)
+    - napraviti tablicu s relacijama (polazni grad, završni grad, udaljenost u km, vrijeme putovanja...)
+    - napraviti tablicu s putovanjima (naziv putovanja, datum, auto(m2o), relacija(m2o)...)
+- na putovanjima probati izračune (funkcije, relacijska polja...)
+    - koliko će biti goriva potrošeno -> funkcijsko polje
+    - povezana polja koja će pokazati kolika je dužina puta na putovanju u km
+    - povezana polja koja će pokazati koliko je trajanje puta na putovanju
+   

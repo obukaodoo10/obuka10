@@ -29,6 +29,7 @@
               <group>
                 <field name="country"/>
                 <field name="adress"/>
+                <field name="active"/>
               </group>
            </group>
            <notebook>

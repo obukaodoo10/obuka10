@@ -13,5 +13,6 @@ class trainingLocation(models.Model):
     description = fields.Html('Description')
     addition = fields.Text('Practice!')
     training_ids = fields.One2many('training.training', 'location_id', 'Trainings' , readonly=True)
+    active = fields.Boolean('Active', default=True)
 
 

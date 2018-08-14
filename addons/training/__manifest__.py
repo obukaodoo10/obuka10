@@ -19,7 +19,7 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base'],
+    'depends': ['hr'],
 
     # always loaded
     'data': [
@@ -27,6 +27,7 @@
         'data/training_sequence.xml',
         'views/training_views.xml',
         'views/training_location.xml',
+        'views/hr.xml',
         # 'views/templates.xml',
     ],
     # only loaded in demonstration mode

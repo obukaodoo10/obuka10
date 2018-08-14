@@ -46,7 +46,7 @@
                                 <field name="total_amount"/>
                             </group>
                             <group>
-                                <field name="trainer_id" options="{'no_create': True}"/>
+                                <field name="trainer_id" options="{'no_create': True}" domain="[('job_category', '=', 'teacher')]"/>
                                 <field name="trainer_country_id" />
                                 <field name="trainer_currency_symbol"/>
                                 <field name="trainer_currency_symbol_depends"/>

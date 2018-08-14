@@ -19,4 +19,7 @@
         <!--   </dl> -->
         <!-- </template> -->
     </data>
+
+    <!-- Inherit Form View to Modify it -->
+
 </odoo>

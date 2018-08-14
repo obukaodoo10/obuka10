@@ -2,3 +2,4 @@
 
 from . import location
 from . import training
+from . import hr

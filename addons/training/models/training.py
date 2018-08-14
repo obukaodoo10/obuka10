@@ -8,6 +8,12 @@ from datetime import timedelta
 class trainingTraining(models.Model):
     _name = 'training.training'
 
+    def _get_default_employee(self):
+        empObj = self.env['hr.employee']
+        employee = empObj.search([('user_id', '=', self.env.user.id)], limit=1)
+        if employee:
+            return employee
+
     name = fields.Char('Name', limit=20, required=True)
     description = fields.Text('Description')
     length_days = fields.Integer('Length In Days', default=2)
@@ -20,7 +26,7 @@ class trainingTraining(models.Model):
                               ('done', 'Done'),
                               ('cancel', 'Cancelled')], default='draft')
     student_ids = fields.One2many('training.student', 'training_id', 'Students')
-    trainer_id = fields.Many2one('res.partner', 'Trainer', required=True, default=lambda self: self.env.user.partner_id)
+    trainer_id = fields.Many2one('hr.employee', 'Trainer', required=True, default=_get_default_employee)
     number = fields.Char('Number', readonly=True)
     location_id = fields.Many2one('location.training', 'Location')
     hall_ids = fields.Many2many('training.hall', string='Halls')

@@ -46,8 +46,9 @@
                                 <field name="total_amount"/>
                             </group>
                             <group>
-                                <field name="trainer_id" options="{'no_create': True}" domain="[('job_category', '=', 'teacher')]"/>
-                                <field name="trainer_country_id" />
+                                <field name="trainer_id" options="{'no_create': True}"
+                                       domain="[('job_category', '=', 'teacher')]"/>
+                                <field name="trainer_country_id"/>
                                 <field name="trainer_currency_symbol"/>
                                 <field name="trainer_currency_symbol_depends"/>
                                 <field name="start_date"/>
@@ -160,6 +161,24 @@
 
         <!--<menuitem name="Locations" id="training.menu_2_list" parent="training.menu_1"-->
         <!--action="training.location_action"/>-->
+
+        <report
+                id="training_report"
+                model="training.training"
+                string="Training"
+                report_type="qweb-pdf"
+                name="training.report_training"
+                file="training.report_training"
+        />
+
+         <report
+                id="training_list_report"
+                model="training.report.wizard"
+                string="Training"
+                report_type="qweb-pdf"
+                name="training.report_training_list"
+                file="training.report_training_list"
+        />
 
     </data>
 </odoo>

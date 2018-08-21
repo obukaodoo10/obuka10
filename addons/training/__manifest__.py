@@ -28,6 +28,9 @@
         'views/training_views.xml',
         'views/training_location.xml',
         'views/hr.xml',
+        'report/report_training.xml',
+        'wizard/wizard_stock_inventory_view.xml',
+        'report/report_training_list.xml',
         # 'views/templates.xml',
     ],
     # only loaded in demonstration mode
